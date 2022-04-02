@@ -4,7 +4,7 @@ from io import BytesIO
 
 with open("./reference.png") as file:
     img = Image.open(file.buffer)
-    img = img.resize((img.size[0] * 3, img.size[1] * 3), Image.NEAREST)
+    img = img.resize((img.size[0], img.size[1]), Image.NEAREST)
 
     mask_url = "https://media.discordapp.net/attachments/267492253168173056/959625681141104700/mask.png"
     response = requests.get(mask_url)
