@@ -2,7 +2,7 @@ from PIL import Image, ImageOps
 import requests
 from io import BytesIO
 
-response = requests.get("https://raw.githubusercontent.com/xetera/rplace-image/main/reference.png")
+response = requests.get("https://raw.githubusercontent.com/xetera/rplace-red-velvet/main/reference.png")
 img = Image.open(BytesIO(response.content))
 img = img.resize((img.size[0] * 3, img.size[1] * 3), Image.NEAREST)
 
