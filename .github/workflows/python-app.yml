@@ -16,15 +16,9 @@ jobs:
       run: pip install pillow requests
     - name: Run a one-line script
       run: python ./.github/workflows/sync_template.py
-    - name: switching from HTTPS to SSH
-      run: git remote set-url origin ${{ secrets.ssh }}
-    - name: check for changes
-      run: git status
-    - name: Commit report
-      run: |
-          git config --global user.name 'rvbot'
-          git config --global user.email 'redvelvet@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git add .
-          git commit -am "sync image"
-          git push
+    - name: Commit rules
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Rebuilt overlay
+        file_pattern: red_velvet_overlay.png
+        commit_user_name: RV Bot
