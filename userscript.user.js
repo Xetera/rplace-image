@@ -14,7 +14,7 @@ if (window.top !== window.self) {
         (function () {
             const i = document.createElement("img");
             const time = Math.floor(Date.now() / 10000);
-            i.src = "https://raw.githubusercontent.com/rplacesuperstonk/rplace-image/main/superstonk_overlay.png?tstamp=" + time;
+            i.src = "https://raw.githubusercontent.com/xetera/rplace-image/main/red_velvet_overlay.png?tstamp=" + time;
             i.style = "position: absolute;left: 0;top: 0;image-rendering: pixelated;width: 1000px;height: 1000px;";
             console.log(i);
             return i;
