@@ -16,8 +16,7 @@ with open("./reference.png") as file:
     mask.paste(mask_i, (0, 0))
     mask.paste(mask_i, (mask_i.width, 0))
 
-    tl = (1607 * SCALING, 880 * SCALING) # top left corner
-    mask.save("mask.png")
+    tl = (1606 * SCALING, 879 * SCALING) # top left corner
 
     final_img = Image.new('RGBA', (2000 * SCALING, 1000 * SCALING))
     unmasked_img = Image.new('RGBA', (2000 * SCALING, 1000 * SCALING))
