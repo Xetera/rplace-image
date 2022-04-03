@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Red Velvet Logo template
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  try to take over the canvas!
 // @author       xetera
 // @match        https://hot-potato.reddit.com/embed*
